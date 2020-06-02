@@ -1,0 +1,218 @@
+@font-face {
+    font-family: 'hoffman';
+    src: url(../font/hoffmann.TTF);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header.header {
+    position: absolute;
+    width: 100%;
+    opacity: 0.9;
+    background: #222;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(8, 1fr);
+    border-bottom: 1px solid #4a4949;
+    z-index: 1;
+}
+
+header.header .logo {
+    grid-column: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+header.header .logo img {
+    width: 150px;
+}
+
+header.header .nav {
+    display: flex;
+    justify-content: center;
+    grid-column: 2/8;
+}
+
+header.header .nav ul {
+    list-style: none;
+}
+
+header.header .nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'hoffman';
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+div.btn-ticket {
+    grid-column: 8/9;
+}
+
+div.btn-ticket a {
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    border: none;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .3s;
+    background: #FF512F;
+    box-shadow: 0 0 10px #FF512F,0 0 0px #FF512F, 0 0 0px #FF512F;
+}
+
+div.btn-ticket a:hover {
+    background: #FF512F;
+    box-shadow: 0 0 10px #FF512F,0 0 40px #FF512F, 0 0 80px #FF512F;
+    transition-delay: .2s;
+}
+
+div.main {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+div.banner {
+    background-image: url(../images/arcaneqop.png);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+div.fade-banner {
+    width: 100%;
+    height: 50vw;
+    max-height: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+div.fade-shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0) linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.733) 80%, rgb(0, 0, 0) 100%) repeat scroll 0% 0%;
+}
+
+header.header .nav ul li a:hover {
+    color: #FF512F;
+    transition: .3s;
+}
+
+div.container {
+    margin-top: 700px !important;
+    max-width: 1440px;
+    position: relative;
+    z-index: 1024;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+div.info-dota {
+    grid-column: 1/2;
+    display: flex;
+    justify-content: start;
+}
+
+div.details {
+    position: relative;
+    z-index: 10;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+div.details p {
+    color: #fff;
+    font-size: 40px;
+}
+
+div.details h1 {
+    color: #fff;
+    font-size: 140px;
+}
+
+div.link-arcane {
+    margin-top: 30px;
+}
+
+div.link-arcane a {
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #FF512F;
+    transition: .1s;
+}
+
+div.link-arcane a:hover {
+    background: #FF512F;
+    box-shadow: 0 0 10px #FF512F,0 0 40px #FF512F, 0 0 80px #FF512F;
+    transition-delay: 0.1s;
+}
+
+div.info-arcane {
+    grid-column: 2/3;
+    font-family: 'Montserrat';
+    text-align: center;
+}
+
+div.info-arcane h2 {
+    text-transform: uppercase;
+    color: #EAD4A9;
+    text-shadow: 2px 3px 4px rgb(114, 114, 114);
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+div.info-arcane p {
+    color: #fff;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 1440px) {
+    div.container {
+        max-width: 1200px;
+        margin-top: 630px !important;
+    }
+    div.details p {
+        font-size: 30px;
+    }
+    
+    div.details h1 {
+        font-size: 100px;
+    }
+    
+    div.link-arcane {
+        margin-top: 20px;
+    }
+    
+    div.link-arcane a {
+        padding: 10px 30px;
+        text-decoration: none;
+        color: #fff;
+        border: 1px solid #FF512F;
+        transition: .1s;
+    }
+    div.info-arcane h2 {
+        font-size: 30px;
+    }
+    
+    div.info-arcane p {
+        font-size: 14px;
+    }
+}
